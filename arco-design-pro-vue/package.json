@@ -1,0 +1,37 @@
+{
+  "name": "arco-design-pro-vue",
+  "description": "Arco Design Pro for Vue",
+  "version": "2.7.3",
+  "author": "ArcoDesign Team",
+  "license": "MIT",
+  "scripts": {
+    "prepublishOnly": "node scripts/prepublish",
+    "postpublish": "node scripts/postpublish",
+    "gen:cra": "node scripts/cra",
+    "gen:vite": "node scripts/vite",
+    "gen:vite-simple": "node scripts/vite --simple",
+    "gen:nuxt": "node scripts/nuxt",
+    "prepare": "husky install"
+  },
+  "files": [
+    ".arco-cli",
+    "scripts",
+    "arco-design-pro-vite",
+    "!/**/node_modules",
+    "!/**/.nuxt",
+    "!/**/.eslintcache",
+    "!/**/.stylelintcache",
+    "!/**/dist"
+  ],
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "minimist": "^1.2.5",
+    "prettier": "^2.5.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^12.0.1",
+    "husky": "^8.0.3"
+  },
+  "packageManager": "pnpm@10.22.0+sha512.bf049efe995b28f527fd2b41ae0474ce29186f7edcb3bf545087bd61fbbebb2bf75362d1307fda09c2d288e1e499787ac12d4fcb617a974718a6051f2eee741c"
+}

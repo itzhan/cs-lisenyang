@@ -25,7 +25,7 @@
           @click="$router.push(`/courses/${c.id}`)"
         >
           <div class="card-cover">
-            <span>🏊‍♂️</span>
+            <img :src="c.coverUrl || 'https://images.unsplash.com/photo-1530549387789-4c1017266635?w=400&h=300&fit=crop&q=80'" alt="课程封面" />
           </div>
           <div class="card-body">
             <div class="card-title">{{ c.courseName }}</div>

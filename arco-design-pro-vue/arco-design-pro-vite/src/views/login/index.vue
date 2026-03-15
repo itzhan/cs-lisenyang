@@ -1,10 +1,11 @@
 <template>
   <div class="container">
     <div class="logo">
-      <img
-        alt="logo"
-        src="//p3-armor.byteimg.com/tos-cn-i-49unhts6dw/dfdba5317c0c20ce20e64fac803d52bc.svg~tplv-49unhts6dw-image.image"
-      />
+      <svg class="logo-svg" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#0077B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+        <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+        <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+      </svg>
       <div class="logo-text">翔泳社管理系统</div>
     </div>
     <LoginBanner />
@@ -32,7 +33,7 @@
 
     .banner {
       width: 550px;
-      background: linear-gradient(163.85deg, #1d2129 0%, #00308f 100%);
+      background: linear-gradient(163.85deg, #023e8a 0%, #0077B6 50%, #00B4D8 100%);
     }
 
     .content {
@@ -60,11 +61,16 @@
     display: inline-flex;
     align-items: center;
 
+    &-svg {
+      flex-shrink: 0;
+    }
+
     &-text {
       margin-right: 4px;
-      margin-left: 4px;
-      color: var(--color-fill-1);
-      font-size: 20px;
+      margin-left: 8px;
+      color: var(--color-text-1);
+      font-weight: 600;
+      font-size: 18px;
     }
   }
 </style>

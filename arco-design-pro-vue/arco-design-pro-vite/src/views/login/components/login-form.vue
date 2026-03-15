@@ -1,7 +1,7 @@
 <template>
   <div class="login-form-wrapper">
-    <div class="login-form-title">{{ $t('login.form.title') }}</div>
-    <div class="login-form-sub-title">{{ $t('login.form.title') }}</div>
+    <div class="login-form-title">翔泳社管理系统</div>
+    <div class="login-form-sub-title">游泳馆运营管理后台</div>
     <div class="login-form-error-msg">{{ errorMessage }}</div>
     <a-form
       ref="loginForm"
@@ -136,9 +136,13 @@
 
     &-title {
       color: var(--color-text-1);
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 32px;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 34px;
+      background: linear-gradient(135deg, #023e8a, #0077B6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     &-sub-title {

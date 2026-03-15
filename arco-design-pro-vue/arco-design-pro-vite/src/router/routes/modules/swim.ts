@@ -124,16 +124,6 @@ const SWIM: AppRouteRecordRaw = {
       },
     },
     {
-      path: 'files',
-      name: 'SwimFiles',
-      component: () => import('@/views/swim/files/index.vue'),
-      meta: {
-        locale: 'menu.swim.files',
-        requiresAuth: true,
-        roles: ['ADMIN'],
-      },
-    },
-    {
       path: 'coach/schedules',
       name: 'CoachSchedules',
       component: () => import('@/views/swim/coach/schedules.vue'),

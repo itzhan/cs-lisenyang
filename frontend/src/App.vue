@@ -3,7 +3,7 @@
     <header class="app-header">
       <div class="container header-inner">
         <router-link to="/" class="logo">
-          <span class="logo-icon">🏊</span>
+          <Waves class="logo-icon" :size="26" :stroke-width="2.5" />
           <span class="logo-text">翔泳社</span>
         </router-link>
 
@@ -75,7 +75,7 @@
     <footer class="app-footer">
       <div class="container footer-inner">
         <div class="footer-brand">
-          <span class="logo-icon">🏊</span>
+          <Waves class="logo-icon" :size="22" :stroke-width="2.5" />
           <span>翔泳社游泳馆管理系统</span>
         </div>
         <div class="footer-copy">© 2025 翔泳社. All rights reserved.</div>
@@ -89,6 +89,7 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from './stores/auth'
 import { IconDown, IconMenu } from '@arco-design/web-vue/es/icon'
+import { Waves } from 'lucide-vue-next'
 
 const authStore = useAuthStore()
 const router = useRouter()
@@ -135,7 +136,7 @@ function handleLogout() {
 }
 
 .logo-icon {
-  font-size: 26px;
+  color: #0077B6;
 }
 
 .nav-links {

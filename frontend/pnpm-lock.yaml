@@ -14,6 +14,9 @@ importers:
       axios:
         specifier: ^1.7.7
         version: 1.13.2
+      lucide-vue-next:
+        specifier: ^0.577.0
+        version: 0.577.0(vue@3.5.26)
       pinia:
         specifier: ^2.2.6
         version: 2.3.1(vue@3.5.26)
@@ -519,6 +522,11 @@ packages:
 
   is-arrayish@0.3.4:
     resolution: {integrity: sha512-m6UrgzFVUYawGBh1dUsWR5M2Clqic9RVXC/9f8ceNlv2IcO9j9J/z8UoCLPqtsPBFNzEpfR3xftohbfqDx8EQA==}
+
+  lucide-vue-next@0.577.0:
+    resolution: {integrity: sha512-py05bAfv9SHVJqscbiOnjcnLlEmOffA58a+7XhZuFxrs6txe1E8VoR1ngWGTYO+9aVKABAz8l3ee3PqiQN9QPA==}
+    peerDependencies:
+      vue: '>=3.0.1'
 
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
@@ -1048,6 +1056,10 @@ snapshots:
       function-bind: 1.1.2
 
   is-arrayish@0.3.4: {}
+
+  lucide-vue-next@0.577.0(vue@3.5.26):
+    dependencies:
+      vue: 3.5.26
 
   magic-string@0.30.21:
     dependencies:

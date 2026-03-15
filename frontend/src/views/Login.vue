@@ -3,21 +3,21 @@
     <div class="login-container">
       <div class="login-left">
         <div class="login-brand">
-          <span class="brand-icon">🏊</span>
+          <Waves class="brand-icon" :size="48" :stroke-width="2" />
           <h2>翔泳社</h2>
           <p>专业游泳培训与管理平台</p>
         </div>
         <div class="login-features">
           <div class="feature-item">
-            <span class="feature-icon">📚</span>
+            <BookOpen class="feature-icon" :size="20" />
             <span>丰富的课程选择</span>
           </div>
           <div class="feature-item">
-            <span class="feature-icon">👨‍🏫</span>
+            <GraduationCap class="feature-icon" :size="20" />
             <span>专业教练团队</span>
           </div>
           <div class="feature-item">
-            <span class="feature-icon">📅</span>
+            <CalendarDays class="feature-icon" :size="20" />
             <span>便捷在线预约</span>
           </div>
         </div>
@@ -106,6 +106,7 @@ import { useRouter, useRoute } from 'vue-router'
 import { Message } from '@arco-design/web-vue'
 import { login, register } from '../api/user'
 import { useAuthStore } from '../stores/auth'
+import { Waves, BookOpen, GraduationCap, CalendarDays } from 'lucide-vue-next'
 
 const router = useRouter()
 const route = useRoute()
@@ -203,7 +204,7 @@ async function handleRegister() {
 }
 
 .brand-icon {
-  font-size: 48px;
+  color: rgba(255, 255, 255, 0.95);
   display: block;
   margin-bottom: 16px;
 }
@@ -234,7 +235,8 @@ async function handleRegister() {
 }
 
 .feature-icon {
-  font-size: 20px;
+  opacity: 0.9;
+  flex-shrink: 0;
 }
 
 .login-right {

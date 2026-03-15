@@ -28,9 +28,9 @@
                 <div class="reservation-info">
                   <div class="reservation-course">{{ r.courseName || '课程' }}</div>
                   <div class="reservation-meta">
-                    <span v-if="r.scheduleDate">📅 {{ r.scheduleDate }}</span>
-                    <span v-if="r.startTime">⏰ {{ r.startTime }} - {{ r.endTime }}</span>
-                    <span v-if="r.coachName">👨‍🏫 {{ r.coachName }}</span>
+                    <span v-if="r.scheduleDate"><CalendarDays :size="14" style="vertical-align: -2px" /> {{ r.scheduleDate }}</span>
+                    <span v-if="r.startTime"><Clock :size="14" style="vertical-align: -2px" /> {{ r.startTime }} - {{ r.endTime }}</span>
+                    <span v-if="r.coachName"><GraduationCap :size="14" style="vertical-align: -2px" /> {{ r.coachName }}</span>
                   </div>
                   <div class="reservation-time">预约时间：{{ r.createTime }}</div>
                 </div>
@@ -126,6 +126,7 @@ import { ref, reactive, onMounted } from 'vue'
 import { Message } from '@arco-design/web-vue'
 import { IconUser, IconCalendar, IconFile } from '@arco-design/web-vue/es/icon'
 import { getReservations, cancelReservation, submitEvaluation } from '../../api/user'
+import { CalendarDays, Clock, GraduationCap } from 'lucide-vue-next'
 
 const reservations = ref([])
 const loading = ref(false)

@@ -52,7 +52,7 @@
             @click="$router.push(`/courses/${c.id}`)"
           >
             <div class="card-cover">
-              <span>🏊‍♂️</span>
+              <img :src="c.coverUrl || 'https://images.unsplash.com/photo-1530549387789-4c1017266635?w=400&h=300&fit=crop&q=80'" alt="课程封面" />
             </div>
             <div class="card-body">
               <div class="card-title">{{ c.courseName }}</div>
@@ -65,7 +65,7 @@
           </div>
         </div>
         <div class="empty-state" v-else-if="!loading">
-          <div class="empty-icon">📭</div>
+          <div class="empty-icon"><Inbox :size="48" :stroke-width="1.5" /></div>
           <p>暂无课程数据</p>
         </div>
         <div style="text-align: center; margin-top: 32px" v-if="courses.length">
@@ -110,7 +110,7 @@
           </div>
         </div>
         <div class="empty-state" v-else-if="!loading">
-          <div class="empty-icon">📭</div>
+          <div class="empty-icon"><Inbox :size="48" :stroke-width="1.5" /></div>
           <p>暂无公告</p>
         </div>
         <div style="text-align: center; margin-top: 32px" v-if="notices.length">
@@ -124,6 +124,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { getCourses, getCoaches, getNotices } from '../api/public'
+import { Inbox } from 'lucide-vue-next'
 
 const courses = ref([])
 const coaches = ref([])

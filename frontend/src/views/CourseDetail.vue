@@ -13,7 +13,7 @@
         <div class="detail-card">
           <div class="detail-header">
             <div class="detail-cover">
-              <span>🏊‍♂️</span>
+              <img :src="course.coverUrl || 'https://images.unsplash.com/photo-1530549387789-4c1017266635?w=480&h=360&fit=crop&q=80'" alt="课程封面" />
             </div>
             <div class="detail-info">
               <h1 class="detail-title">{{ course.courseName }}</h1>
@@ -185,12 +185,14 @@ onMounted(() => {
   width: 240px;
   height: 180px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, #e8f4ff 0%, #d6e8fa 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 64px;
+  overflow: hidden;
   flex-shrink: 0;
+}
+
+.detail-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .detail-info {

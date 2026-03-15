@@ -32,7 +32,7 @@ app:
   jwt:
     secret: "xiangshe-secret-key-change-me-please-32bytes"
     expiration-seconds: 7200
-  upload-dir: "uploads"
+  upload-dir: "/Users/itzhan/Desktop/毕业设计/李森2/swim-admin/uploads"
   upload-url-prefix: "/uploads/"
 
 logging:

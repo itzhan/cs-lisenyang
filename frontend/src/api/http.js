@@ -2,7 +2,7 @@ import axios from 'axios'
 import { Message } from '@arco-design/web-vue'
 
 const http = axios.create({
-  baseURL: 'http://localhost:8080/api',
+  baseURL: '/api',
   timeout: 15000,
 })
 
@@ -31,6 +31,8 @@ http.interceptors.response.use(
       Message.error('登录已过期，请重新登录')
       window.location.hash = ''
       window.location.href = '/login'
+    } else if (error.response?.status === 403) {
+      Message.error('您没有权限访问该功能，请确认登录状态')
     } else {
       Message.error(error.response?.data?.message || '网络异常，请稍后重试')
     }
